@@ -17,7 +17,7 @@ public class ArrayUtil {
 		ArrayList<E>[] list = new ArrayList[array.length];
 		
 		for(int i = 0; i < array.length; i++) {
-			ArrayList<E> ele = new ArrayList<>();
+			ArrayList<E> ele = new ArrayList<E>();
 			for(int j = 0; j < array[i].length; j++) {
 				ele.add(array[i][j]);
 			}

@@ -267,7 +267,7 @@ public class MathUtil {
 	private static <T> ArrayList<T> transformIndexToObject(ArrayList<T> list, ArrayList<Object> cacheIndex) {
 		ArrayList<T> result = new ArrayList<T>();
 		for(Object index : cacheIndex) {
-			result.add(list.get((int)index));
+			result.add(list.get((Integer)index));
 		}
 		return result;
 	}
