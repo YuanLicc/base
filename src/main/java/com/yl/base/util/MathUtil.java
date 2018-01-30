@@ -27,26 +27,28 @@ public class MathUtil {
 	public static final String OPERATOR_RIGHT_PARENTHESES = ")";
 
 	/**
-	 * <strong><ul>计算中缀表达式</strong>
-	 * <li>1.将中缀表达式转后缀表达式{@link #transformToPostfix(ArrayList)}。
-	 * <li>2.计算后缀表达式{@link #caculatePostfix(ArrayList)}。
+	 * <ul>计算中缀表达式
+	 * <li>1.将中缀表达式转后缀表达式{@link #transformToPostfix(ArrayList)}。</li>
+	 * <li>2.计算后缀表达式{@link #caculatePostfix(ArrayList)}。</li></ul>
 	 * @param infix
+	 * @return 后缀表达式值
 	 */
 	public static double caculateInfix(ArrayList<Object> infix) {
 		return caculatePostfix(transformToPostfix(infix));
 	}
 	
 	/**
-	 * <strong><ul>中缀表达式转后缀表达式（辅助栈法）</strong>
-	 * <li>1.初始化两个栈，一个表示运算符栈，一个表示后缀表达式栈
-	 * <li>2.从左往右遍历中缀表达式。
-	 * <li>3.若遇见数字，直接加入后缀表达式栈。
-	 * <li>4.若遇见左括号，直接加入运算符栈。
-	 * <li>5.若遇见右括号，弹出运算符栈中的运算符符直至遇到左括号。
-	 * <li>6.若遇见加减运算符，则弹出运算符栈中的加减乘除运算符加入后缀表达式栈（实质是判断操作符栈的运算符的优先级是否小于当前运算符，
-	 * <li>很显然，加减运算符的优先级不大于任何运算符，所以运算符栈直接弹出加入到后缀表达式栈）
-	 * <li>7.若遇见乘除运算符，同6，弹出运算符栈顶为加减的运算符加入后缀表达式栈。
+	 * <ul>中缀表达式转后缀表达式（辅助栈法）
+	 * <li>1.初始化两个栈，一个表示运算符栈，一个表示后缀表达式栈</li>
+	 * <li>2.从左往右遍历中缀表达式。</li>
+	 * <li>3.若遇见数字，直接加入后缀表达式栈。</li>
+	 * <li>4.若遇见左括号，直接加入运算符栈。</li>
+	 * <li>5.若遇见右括号，弹出运算符栈中的运算符符直至遇到左括号。</li>
+	 * <li>6.若遇见加减运算符，则弹出运算符栈中的加减乘除运算符加入后缀表达式栈（实质是判断操作符栈的运算符的优先级是否小于当前运算符，</li>
+	 * <li>很显然，加减运算符的优先级不大于任何运算符，所以运算符栈直接弹出加入到后缀表达式栈）</li>
+	 * <li>7.若遇见乘除运算符，同6，弹出运算符栈顶为加减的运算符加入后缀表达式栈。</li></ul>
 	 * @param infix 中缀表达式
+	 * @return 后缀表达式
 	 */
 	public static ArrayList<Object> transformToPostfix(ArrayList<Object> infix){
 		ArrayList<Object> result = new ArrayList<Object>();
@@ -88,12 +90,13 @@ public class MathUtil {
 	}
 	
 	/**
-	 * <strong><ul>计算后缀表达式（辅助栈）</strong>
-	 * <li>1.创建一个数字栈。
-	 * <li>2.从左到右遍历后缀表达式。
-	 * <li>3.遇见数字直接入数字栈。
-	 * <li>4.遇见运算符取数字栈的栈顶的两个数字进行该运算符的运算，运算结果如数字栈。
+	 * <ul>计算后缀表达式（辅助栈）
+	 * <li>1.创建一个数字栈。</li>
+	 * <li>2.从左到右遍历后缀表达式。</li>
+	 * <li>3.遇见数字直接入数字栈。</li>
+	 * <li>4.遇见运算符取数字栈的栈顶的两个数字进行该运算符的运算，运算结果如数字栈。</li></ul>
 	 * @param postfix 后缀表达式
+	 * @return 后缀表达式值
 	 */
 	public static double caculatePostfix(ArrayList<Object> postfix) {
 		Stack<Double> numStack = new Stack<Double>();
@@ -123,10 +126,11 @@ public class MathUtil {
 	}
 	
 	/**
-	 * <strong><ul>给定列表的全排列（给定元素集合进行排列组合，考虑元素顺序）</strong>
-	 * <li>1.参数为空或者长度小于2抛出异常。
-	 * <li>2.其他则进行全排（广度优先遍历）。
+	 * <ul>给定列表的全排列（给定元素集合进行排列组合，考虑元素顺序）
+	 * <li>1.参数为空或者长度小于2抛出异常。</li>
+	 * <li>2.其他则进行全排（广度优先遍历）。</li></ul>
 	 * @param list 给定列表
+	 * @return 全排列
 	 */
 	public static <T> ArrayList<ArrayList<T>> fullPermutations (ArrayList<T> list) {
 		if(list == null || list.size() == 0 || list.size() == 1) {
@@ -137,10 +141,11 @@ public class MathUtil {
 	}
 	
 	/**
-	 * <strong><ul>给定列表的全排列（给定元素集合进行排列组合，考虑元素顺序）</strong>
-	 * <li>1.参数为空或者长度小于2抛出异常。
-	 * <li>2.其他则进行全排（广度优先遍历）。
+	 * <ul>给定列表的全排列（给定元素集合进行排列组合，考虑元素顺序）
+	 * <li>1.参数为空或者长度小于2抛出异常。</li>
+	 * <li>2.其他则进行全排（广度优先遍历）。</li></ul>
 	 * @param list 给定列表
+	 * @return 全排列
 	 */
 	public static <T> ArrayList<ArrayList<T>> fullPermutations (@SuppressWarnings("unchecked") T...arr) {
 		ArrayList<T> list = new ArrayList<T>();
@@ -154,11 +159,12 @@ public class MathUtil {
 	}
 	
 	/**
-	 * <strong><ul>给定列表的部分元素排列（给定元素集合进行排列组合，考虑元素顺序）</strong>
-	 * <li>1.参数为空或者长度小于2抛出异常。
-	 * <li>2.其他则进行全排（广度优先遍历）。
+	 * <ul>给定列表的部分元素排列（给定元素集合进行排列组合，考虑元素顺序）
+	 * <li>1.参数为空或者长度小于2抛出异常。</li>
+	 * <li>2.其他则进行全排（广度优先遍历）。</li></ul>
 	 * @param list 给定列表
 	 * @param selectNum 选择多少个元素（应该大于1且小于等于列表长度）
+	 * @return 部分排列
 	 */
 	public static <T> ArrayList<ArrayList<T>> partPermutations (ArrayList<T> list, int selectNum) {
 		if(list == null || list.size() == 0 || list.size() == 1 || selectNum > list.size()) {
@@ -169,11 +175,12 @@ public class MathUtil {
 	}
 	
 	/**
-	 * <strong><ul>给定列表的部分元素排列（给定元素集合进行排列组合，考虑元素顺序）</strong>
-	 * <li>1.参数为空或者长度小于2抛出异常。
-	 * <li>2.其他则进行全排（广度优先遍历）。
+	 * <ul>给定列表的部分元素排列（给定元素集合进行排列组合，考虑元素顺序）
+	 * <li>1.参数为空或者长度小于2抛出异常。</li>
+	 * <li>2.其他则进行全排（广度优先遍历）。</li></ul>
 	 * @param list 给定列表
 	 * @param selectNum 选择多少个元素（应该大于1且小于等于列表长度）
+	 * @return 部分元素的排列
 	 */
 	public static <T> ArrayList<ArrayList<T>> partPermutations (int selectNum, @SuppressWarnings("unchecked") T...arr) {
 		ArrayList<T> list = new ArrayList<T>();
@@ -188,12 +195,13 @@ public class MathUtil {
 	}
 	
 	/**
-	 * <strong><ul>给定列表的自定义排列（给定元素集合进行排列组合，考虑元素顺序）</strong>
-	 * <li>1.参数为空或者长度小于2抛出异常。
-	 * <li>2.其他则进行全排（广度优先遍历）。
+	 * <ul>给定列表的自定义排列（给定元素集合进行排列组合，考虑元素顺序）
+	 * <li>1.参数为空或者长度小于2抛出异常。</li>
+	 * <li>2.其他则进行全排（广度优先遍历）。</li></ul>
 	 * @param list 给定列表
 	 * @param selectNum 选择多少个元素（应该大于1且小于等于列表长度）
 	 * @param isRepeat 是否允许元素重复
+	 * @return 自定义排列
 	 */
 	public static <T> ArrayList<ArrayList<T>> customPermutations (ArrayList<T> list, boolean isRepeat, int selectNum) {
 		if(list == null || list.size() == 0 || list.size() == 1) {
@@ -205,12 +213,13 @@ public class MathUtil {
 	}
 	
 	/**
-	 * <strong><ul>给定列表的自定义排列（给定元素集合进行排列组合，考虑元素顺序）</strong>
-	 * <li>1.参数为空或者长度小于2抛出异常。
-	 * <li>2.其他则进行全排（广度优先遍历）。
+	 * <ul>给定列表的自定义排列（给定元素集合进行排列组合，考虑元素顺序）
+	 * <li>1.参数为空或者长度小于2抛出异常。</li>
+	 * <li>2.其他则进行全排（广度优先遍历）。</li></ul>
 	 * @param list 给定列表
 	 * @param selectNum 选择多少个元素（应该大于1且小于等于列表长度）
 	 * @param isRepeat 是否允许元素重复
+	 * @return 自定义排列
 	 */
 	public static <T> ArrayList<ArrayList<T>> customPermutations (boolean isRepeat, int selectNum, @SuppressWarnings("unchecked") T...arr) {
 		ArrayList<T> list = new ArrayList<T>();
@@ -232,6 +241,7 @@ public class MathUtil {
 	 * @param result 结果集合
 	 * @param select 排列元素个数
 	 * @param isRepeat 排列中是否允许元素重复
+	 * @return 全排列
 	 */
 	private static <T> ArrayList<ArrayList<T>> fullPermutations(Node<T> node, ArrayList<T> list, LinkedList<Node<T>> queue, ArrayList<ArrayList<T>> result, int select, boolean isRepeat) {
 		//判断节点是否为空，为空则返回结果

@@ -23,6 +23,10 @@ public class JframeUtil {
 	
 	/**
 	 * 设置窗口居中
+	 * @param jFrame frame
+	 * @param width frame宽度
+	 * @param height frame长度
+	 * @return farme
 	 */
 	public static JFrame centerScreen(JFrame jFrame, int width, int height) {
 		if(jFrame == null) {
