@@ -79,6 +79,7 @@ public class Node<T> implements Serializable {
 
 	/**
 	 * 遍历节点的直系父级节点直到根节点结束，返回节点value的栈
+	 * @return 直系栈
 	 */
 	public Stack<T> traverseNodeParents() {
 		Stack<T> stack = new Stack<T>();
