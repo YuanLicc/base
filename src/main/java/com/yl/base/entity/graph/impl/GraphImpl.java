@@ -3,8 +3,8 @@ package com.yl.base.entity.graph.impl;
 import java.util.ArrayList;
 
 import com.yl.base.entity.graph.Graph;
-import com.yl.base.exception.ConstructException;
 import com.yl.base.util.ArrayUtil;
+import com.yl.exception.ConstructException;
 
 public class GraphImpl<T extends Comparable<T>> implements Graph<T>{
 	private static final long serialVersionUID = 1L;
