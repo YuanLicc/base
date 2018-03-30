@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Stack;
 
 import com.yl.base.entity.node.Node;
-import com.yl.base.exception.CaculateException;
+import com.yl.exception.CaculateException;
 
 /**
  * 数学相关工具类
