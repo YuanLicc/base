@@ -1,4 +1,5 @@
 ##ignore file##
+.idea/
 /target/
 .settings/
 build/
