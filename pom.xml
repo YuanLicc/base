@@ -146,6 +146,14 @@
 		</profile>
 	</profiles>
 
+	<repositories>
+		<repository>
+			<id>YuanLi-maven-repository</id>
+			<name>YuanLi-maven-repository</name>
+			<url>https://raw.github.com/YuanLicc/maven-repository/SNAPSHOT/</url>
+		</repository>
+	</repositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
