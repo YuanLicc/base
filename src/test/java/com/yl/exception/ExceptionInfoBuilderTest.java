@@ -1,9 +1,9 @@
 package com.yl.exception;
 
-import com.yl.expection.CalculateException;
-import com.yl.expection.info.ExceptionInfo;
-import com.yl.expection.info.ExceptionInfoBuilder;
-import com.yl.expection.info.imp.DefaultExceptionInfoBuilder;
+import com.yl.common.expection.CalculateException;
+import com.yl.common.expection.info.ExceptionInfo;
+import com.yl.common.expection.info.ExceptionInfoBuilder;
+import com.yl.common.expection.info.imp.DefaultExceptionInfoBuilder;
 import junit.framework.TestCase;
 
 public class ExceptionInfoBuilderTest extends TestCase {
